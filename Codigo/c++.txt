@@ -1,0 +1,28 @@
+g++ -o Keylogger.exe Keylogger.cpp
+
+Uso de G++ para compilar programas en C++
+Antes de seguir debes haber instalado MinGW en tu sistema Windows. Si no lo ha hecho aún, consulta el documento MinGW (G++) en esta misma sección Herramientas de desarrollo del Campus Virtual. Sigue sus instrucciones para instalar MinGW.
+En los sistemas Linux G++ está instalado por defecto, así que se puede usar como se indica aquí sin necesidad de instalar nada previamente.
+G++ es un compilador de línea de órdenes que compila y enlaza programas en C++, generando el correspondiente archivo ejecutable. Para poder ejecutar las órdenes de compilación de G++ necesitamos una consola (o ventana de terminal), que es una ventana de modo texto que permite dar instrucciones al sistema operativo (SO) ejecutando órdenes una por una.
+El SO entiende una serie de órdenes por defecto (dir, cd, copy, move, ...), cada una con su sintaxis que hay que respetar. Y a medida que instalamos determinados programas se añaden órdenes que se pueden ejecutar en la consola. Por ejemplo, tras instalar MinGW podemos usar la orden g++ para compilar programa en C++. La orden g++ también tiene su sintaxis particular que debemos conocer y respetar para poder escribir y ejecutar las órdenes de compilación correctamente.
+Para abrir una consola usa la opción Símbolo del sistema del grupo de programas Accesorios. Se abrirá una ventana similar a esta:
+
+Como ves, es una ventana en modo texto. Lo único que se pueden mostrar son filas de caracteres. No hay gráficos.
+En las consolas siempre hay un indicativo (prompt) al que le sigue un cursor de texto parpadeante que indica dónde se pondrá el siguiente carácter que se escriba (al principio, tras el indicativo, o tras el último carácter escrito). En la ilustración, el indicativo es C:\Documents and Settings\Luis> y el cursor tiene la forma de un guión bajo (o subrayado). El tu ventana lo verás parpadear.
+El indicativo por defecto muestra la carpeta actual seguida del símbolo mayor que (>). El cursor está esperando que escribamos una orden. Por ejemplo, escribe dir. Es la orden que te permite ver el contenido de la carpeta actual. Una vez escrita una orden la ejecutamos pulsando la tecla Intro. Hazlo y verás aparecer un listado de las subcarpetas y archivos que hay en esa carpeta (C:\Documents and Settings\Luis, en mi caso):
+
+
+¡Enhorabuena! Ya has conseguido compilar y ejecutar tu primer programa en C++.
+
+Pero es importante que sepas qué ocurre cuando no todo va bien, cuando cometemos errores de programación. Para comprobar qué hace G++ cuando encuentra errores, edita el programa (hola.cpp) y:
+
+Quita la directiva inicial (#include … using … std;)
+Quita las comillas de cierre de la cadena.
+Deletrea mal return (por ejemplo, retrun).
+Quita un punto y coma.
+Quita { o }.
+Deletrea mal Mundo (por ejemplo, "Hola Mondo!").
+Para cada caso, compila y vuelve a dejar el programa como estaba tras comprobar el efecto del cambio.
+¿Qué ocurre en el primer caso, por ejemplo? Pues que no se entiende los que son los identificadores cout y endl:
+
+
